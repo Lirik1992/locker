@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var indexRouter = require("./app_server/routes/index");
+var zomatoRouter = require("./app_server/routes/zomatoAPI");
 var usersRouter = require("./app_server/routes/users");
 
 var app = express();
@@ -20,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
+app.use("/zomato", zomatoRouter);
 app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
