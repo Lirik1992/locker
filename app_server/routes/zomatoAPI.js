@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var ctrlCities = require('../controller/cities');
+var ctrlCities = require('../controller/zomatoAPI');
 
 router.get('/cities', ctrlCities.getCities);
 
