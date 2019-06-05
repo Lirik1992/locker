@@ -6,8 +6,8 @@
     "dev": "nodemon ./bin/www"
   },
   "engines": {
-    "node": "~10.6.0",
-    "npm": "~6.1.0"
+    "node": "~10.14.2",
+    "npm": "~6.4.1"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
