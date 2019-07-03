@@ -19,6 +19,19 @@ module.exports.getCities = function(req, res) {
   );
 };
 
+module.exports.search = function(req, res) {
+  client.search(
+    {},
+    function (err, result) {
+      if (!err) {
+        res.send(JSON.parse(result));
+      } else {
+        res.send(err);
+      }
+    }
+  );
+};
+
 /* Get collections by the city id */
 module.exports.getCollections = function(req, res) {
   client.getCollections(
